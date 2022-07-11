@@ -2,27 +2,27 @@
 
 ## Table of Contents
 1.	AWS FARGATE 소개
-    1)	개념
-    2)	클러스터
-    3)	태스크
-    4)	서비스
+    1) 개념
+    2) 클러스터
+    3) 태스크
+    4) 서비스
 2.	전제조건
-    1)	AWS 계정 생성
-    2)	작업 공간 만들기
-    3)	CLI 도구 설치
+    1) AWS 계정 생성
+    2) 작업 공간 만들기
+    3) CLI 도구 설치
 3.	APPLICATION
-    1)	SOURCE
-    2)	Build
-    3)	배포
-    4)	SCALE
-    5)	CLEANUP
+    1) SOURCE
+    2) Build
+    3) 배포
+    4) SCALE
+    5) CLEANUP
 4.	CDK 개요
     1) AWS CDK 툴킷 설치
     2) 새 프로젝트 만들기
     3) ADD OUR APPLICATION
     4) DEPLOY APPLICATION
     5) 데이터베이스 구성
-    6)	CLEANUP
+    6) CLEANUP
 5.	학습 마무리
 6.	결론
 7.	다음 단계
@@ -74,7 +74,7 @@ Fargate를 사용하면 클러스터에서 지정된 수의 작업 정의 인스
 -	작업 공간 만들기
 -	CLI 도구 설치
 
-### 1)	AWS 계정 생성
+### 1) AWS 계정 생성
 계정에는 새로운 IAM 역할을 생성하고 다른 IAM 권한을 범위 지정할 수 있어야합니다. 새 계정의 경우 이는 문제가 되지 않습니다. 보안상의 이유로 회사 / 회사 계정에는 계정에 연결된 IAM과 관련된 제한이 있을 수 있습니다.
 -	관리자 액세스 권한이 있는 AWS 계정이 없는 경우 : 여기를 클릭하여 지금 만드십시오.
 -	AWS 계정을 생성한 후 아래 단계에 따라 이 계정에 대한 관리 액세스 권한이 있는 IAM 사용자를 생성하십시오.
@@ -95,20 +95,21 @@ Fargate를 사용하면 클러스터에서 지정된 수의 작업 정의 인스
 
 ![](./images/그림6.png)
 
-### 2)	작업 공간 만들기
+### 2) 작업 공간 만들기
 Cloud9 작업 공간은 루트 계정 사용자가 아닌 관리자 권한이 있는 IAM 사용자가 빌드해야 합니다. 루트 계정 사용자가 아닌 IAM 사용자로 로그인했는지 확인하십시오.
 * .amazonaws.com 도메인에 대해서는 광고 차단기, 자바 스크립트 차단기 및 추적 차단기가 비활성화되어 있어야합니다. 그렇지 않으면 작업 공간 연결에 영향을 줄 수 있습니다. Cloud9에는 타사 쿠키가 필요합니다. 특정 도메인을 허용 목록에 추가할 수 있습니다.
 
 가장 가까운 지역에서 Cloud9를 시작하십시오.
 | 리전 | Cloud9 환경 생성 |
 | ---- | --------------- |
-버지니아 북부 | Cloud9 환경 생성 : https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1
-오하이오 | Cloud9 환경 생성 : https://us-east-2.console.aws.amazon.com/cloud9/home?region=us-east-2
-오리건 | Cloud9 환경 생성 : https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2
-아일랜드 | Cloud9 환경 생성 : https://eu-west-1.console.aws.amazon.com/cloud9/home?region=eu-west-1
-프랑크푸르트 | Cloud9 환경 생성 : https://eu-central-1.console.aws.amazon.com/cloud9/home?region=eu-central-1
-도쿄 | Cloud9 환경 생성 : https://ap-northeast-1.console.aws.amazon.com/cloud9/home?region=ap-northeast-1
-싱가포르 | Cloud9 환경 생성 : https://ap-southeast-1.console.aws.amazon.com/cloud9/home?region=ap-southeast-1
+| 버지니아 북부 | Cloud9 환경 생성 : https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1 |
+| 오하이오 | Cloud9 환경 생성 : https://us-east-2.console.aws.amazon.com/cloud9/home?region=us-east-2 |
+| 오리건 | Cloud9 환경 생성 : https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2 |
+| 아일랜드 | Cloud9 환경 생성 : https://eu-west-1.console.aws.amazon.com/cloud9/home?region=eu-west-1 |
+| 프랑크푸르트 | Cloud9 환경 생성 : https://eu-central-1.console.aws.amazon.com/cloud9/home?region=eu-central-1 |
+| **서울 | Cloud9 환경 생성 : https://ap-northeast-2.console.aws.amazon.com/cloud9/home?region=ap-northeast-2** |
+| 도쿄 | Cloud9 환경 생성 : https://ap-northeast-1.console.aws.amazon.com/cloud9/home?region=ap-northeast-1 |
+| 싱가포르 | Cloud9 환경 생성 : https://ap-southeast-1.console.aws.amazon.com/cloud9/home?region=ap-southeast-1 |
 
 -	환경 만들기를 선택 하십시오.
 -	작업장 이름을 지정하고 다른 모든 기본값을 유지하십시오.
@@ -123,7 +124,7 @@ Cloud9 환경이 나타나면 시작 탭 과 하단 작업 영역을 닫고 환�
 
 이 테마가 마음 에 들면 Cloud9 작업 공간 메뉴에서 보기 / 테마 / 태양화 / 태양광 을 선택하여 직접 선택할 수 있습니다.
 
-### 3)	CLI 도구 설치
+### 3) CLI 도구 설치
 AWS 명령 줄 인터페이스 (CLI)는 이미 Cloud9에 설치됩니다.
 이 실습에서는 Fargate CLI도 사용합니다. Fargate CLI는 AWS CLI를 사용하여 Fargate에서 컨테이너 작업을 시작하는 복잡성을 추상화하는 작은 도구입니다.
 이 실습에서는 Linux 바이너리를 다운로드하는 명령을 제공합니다. macOS / Windows를 실행중인 경우 다운로드 링크에 대한 공식 문서 를 참조하십시오.
@@ -134,7 +135,7 @@ CLI 유틸리티 설치
 sudo yum -y install jq
 ```
 ```
-AWS 계정 ID 및 리전 구성
+# AWS 계정 ID 및 리전 구성
 export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query 'Account')
 export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r .region)
 ```
@@ -147,7 +148,7 @@ aws configure set default.region $AWS_REGION
 
 ![](./images/그림9.png)
 
-### 1)	SOURCE
+### 1) SOURCE
 이 실습에서 사용할 샘플 Spring 애플리케이션은 Spring PetClinic 샘플 애플리케이션입니다. PetClinic은 Maven을 사용하여 빌드된 Spring Boot 애플리케이션입니다. Cloud9에는 OpenJDK 버전 1.7 설치가 포함되어 있으며 PetClinic을 빌드하고 실행하려면 버전 1.8을 설치해야 합니다.
 
 ```
@@ -189,7 +190,7 @@ java -jar target/*.jar
 
 ctrl-c를 눌러 응용 프로그램을 중지하고 다음 단계로 진행하십시오.
 
-### 2)	Build
+### 2) Build
 이 단계에서는 PetClinic 애플리케이션의 Docker 이미지를 빌드하고 Cloud9 환경에서 로컬로 테스트합니다.
 
 태그 만들기
@@ -271,7 +272,7 @@ fargate service info spring-petclinic
 
 ![](./images/그림15.png)
 
-### 4)	SCALE
+### 4) SCALE
 이 시점에서 클러스터와 서비스가 시작되어 실행 중입니다. 우리의 응용 프로그램은 엄청나게 인기있는 것으로 판명되었으며 클러스터에서 실행중인 컨테이너 수를 확장해야 합니다.
 fargate확장을 위해 CLI를 사용할 것입니다.
 
@@ -291,7 +292,7 @@ fargate service info spring-petclinic
 
 서비스를 2개로 확장했으며 2개의 컨테이너가 실행되고 있음을 알 수 있습니다.
 
-### 5)	CLEANUP
+### 5) CLEANUP
 응용 프로그램을 계속 실행하려는 경우 그렇게할 수 있지만 이 섹션의 끝입니다. Fargate 클러스터를 정리하고 해제하려면 서비스를 삭제해야 합니다.
 
 ```
