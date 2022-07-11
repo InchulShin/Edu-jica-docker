@@ -107,7 +107,7 @@ Cloud9 작업 공간은 루트 계정 사용자가 아닌 관리자 권한이 �
 | 오리건 | Cloud9 환경 생성 : https://us-west-2.console.aws.amazon.com/cloud9/home?region=us-west-2 |
 | 아일랜드 | Cloud9 환경 생성 : https://eu-west-1.console.aws.amazon.com/cloud9/home?region=eu-west-1 |
 | 프랑크푸르트 | Cloud9 환경 생성 : https://eu-central-1.console.aws.amazon.com/cloud9/home?region=eu-central-1 |
-| **서울 | Cloud9 환경 생성 : https://ap-northeast-2.console.aws.amazon.com/cloud9/home?region=ap-northeast-2** |
+| **서울** | **Cloud9 환경 생성 : https://ap-northeast-2.console.aws.amazon.com/cloud9/home?region=ap-northeast-2** |
 | 도쿄 | Cloud9 환경 생성 : https://ap-northeast-1.console.aws.amazon.com/cloud9/home?region=ap-northeast-1 |
 | 싱가포르 | Cloud9 환경 생성 : https://ap-southeast-1.console.aws.amazon.com/cloud9/home?region=ap-southeast-1 |
 
