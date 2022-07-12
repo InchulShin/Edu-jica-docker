@@ -287,4 +287,4 @@ Amazon ECS에서 서비스가 클러스터에 배포한 컨테이너에서 연�
 
 API 테스트에 [Postman](https://www.getpostman.com/)과 같은 도구를 사용할 수도 있습니다.
 
-[이전: 모놀리스 배포](./module-three.md) | [다음: 마이크로서비스 배포](./module-five.md)
+<!-- [이전: 모놀리스 배포](./module-three.md) | [다음: 마이크로서비스 배포](./module-five.md)

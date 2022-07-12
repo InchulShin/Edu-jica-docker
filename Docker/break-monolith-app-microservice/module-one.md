@@ -116,4 +116,4 @@ Amazon ECR 리포지토리로 이동하면 이미지가 v1로 태그된 것을 �
 
 ![](./images/m1s4-3-ecr-image-tag.1650b925b840d135c52f16de8f6f3161ebb061e7.png)
 
-[이전: 소개](./README.md) | [다음: 모놀리스 배포](./module-two.md)
+<!-- [이전: 소개](./README.md) | [다음: 모놀리스 배포](./module-two.md)
