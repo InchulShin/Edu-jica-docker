@@ -41,9 +41,9 @@ Amazon ECS (Amazon Elastic Container Service)는 작업 및 컨테이너에 유�
 ## 작업 1 : Amazon-ECS 실행 설정
 https://console.aws.amazon.com/ecs/home#/firstRun 이 주소를 브라우저의 인터넷 창에 복사 -> 붙여넣기 한 뒤 AWS 콘솔에 로그인 하십시오.
 
-![](./images/2022-07-12-15.41.20.png)
-
 1. Amazon ECS 에는 Amazon Elastic Container Registry(ECR)를 사용하여 이미지 리포지토리를 생성하고 이미지를 리포지토리로 푸시하는 옵션이 첫 실행 마법사에 포함되어 있습니다.
+
+![](./images/2022-07-12-15.41.20.png)
 
 ![](./images/2022-07-12-15.42.37.png)
 
