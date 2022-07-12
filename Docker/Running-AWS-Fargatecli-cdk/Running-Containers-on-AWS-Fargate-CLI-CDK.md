@@ -1,6 +1,11 @@
 # Building and Deploying Containers Using Amazon Elastic Container Service
 
 ## Table of Contents
+
+<details>
+<summary>Table of Contents</summary>
+<div markdown="1">
+
 1.	AWS FARGATE 소개
     1) 개념
     2) 클러스터
@@ -26,6 +31,9 @@
 5.	학습 마무리
 6.	결론
 7.	다음 단계
+
+</div>
+</details>
 
 ## 1.	AWS FARGATE 소개
 ### 기본 Fargate 개념 연습
