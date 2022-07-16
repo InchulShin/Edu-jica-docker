@@ -130,4 +130,4 @@ work1    Ready    <none>                 47m   v1.21.1
 work2    Ready    <none>                 47m   v1.21.1
 ```
 
-[출처](https://sftth.tistory.com/41)
+<!-- [출처](https://sftth.tistory.com/41)
