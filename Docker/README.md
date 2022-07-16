@@ -1,6 +1,6 @@
 # ECSworkshop
 
-* [ECS-LAB](README.md)
+<!-- * [ECS-LAB](README.md)
   * [ECS(ELASTIC CONTAINER SERVICE) 소개](readme/1.introduction.md)
   * [Start the LAB](readme/2.start-the-workshop.md)
   * [ECS LAB](readme/3.microservices.md)
