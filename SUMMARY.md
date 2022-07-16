@@ -1,10 +1,11 @@
 # Table of contents
 
 * [전주정보문화산업진흥원](README.md)
-* [AWS ECS Architecture](./aws-ecs-architecture/AWS-ECS-Architecture.md)
 * [Docker Web UI - Potainer](Docker/Portainer/Portainer-Docker-Web-UI.md)
+* [AWS EC2에 Kubernetes 설치](Docker/sftth.tistory/AWS_EC2_Kubernetes-Install.md)
 * [ECS-샘플페이지 시작하기](Docker/Intro-to-ecs/Introduction-to-Amazon-Elastic-Container-Service.md)
 * [AWS-fargatecli-cdk로 실행하기](Docker/Running-AWS-Fargatecli-cdk/Running-Containers-on-AWS-Fargatecli-cdk.md)
+* [AWS ECS Architecture](Docker/aws-ecs-architecture/AWS-ECS-Architecture.md)
 * [ECS-모놀리스 애플리케이션을 마이크로서비스로 분할](Docker/break-monolith-app-microservice/README.md)
   * [모듈 1 - 모놀리스 컨테이너화](Docker/break-monolith-app-microservice/module-one.md)
   * [모듈 2 - 모놀리스 배포](Docker/break-monolith-app-microservice/module-two.md)
