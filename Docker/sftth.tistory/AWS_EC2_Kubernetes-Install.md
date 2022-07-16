@@ -8,14 +8,14 @@
 
 [참고 공식 문서](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
-## 2. master node 생성
+## 2. Master node 생성
 
 - EC2 생성
 - 생성정보
     - Instance type: t2.medium
     - OS: Ubuntu 20.10
-    - SSD: 8GB
-    - Name: master
+    - SSD: 30GB
+    - Name: Master
     - Security Group: 공식 문서의 권장 포트는 모두 해제
 
 ![](./images/1.png)
@@ -23,7 +23,7 @@
 - hostname 변경
     - 경로: /etc/hostname
     - 기존: ip-10-0-1-228
-    - 변경: master
+    - 변경: Master
     - reboot
 
 ## 3. Container Runtime Interface 설치
@@ -44,6 +44,16 @@ sudo apt-get install  apt-transport-https  ca-certificates  curl  gnupg lsb-rele
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+- 아래 명령어를 통해 containerd의 default values가 들어있는 파일을 생성 합니다
+
+```
+sudo containerd config default > /etc/containerd/config.toml
+sudo systemctl restart containerd
+sudo systemctl is-enabled containerd disabled 
+sudo systemctl enable containerd
+Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /usr/lib/systemd/system/containerd.service.
 ```
 
 ## 4. kubeadm 설치
