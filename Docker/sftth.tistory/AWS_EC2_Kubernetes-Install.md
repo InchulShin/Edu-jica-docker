@@ -108,8 +108,8 @@ mkdir -p $HOME/.kube
 worker 노드에서 아래 스크립트 수행하여 worker 노드 추가
 
 ```
-kubeadm join 10.0.1.228:6443 --token nh1mww.vw7fq72f53m6jcba \
-	--discovery-token-ca-cert-hash sha256:53c88cb516b751cd5a87f44ff8b4027c043953b77d02c7d7deec0640702b53c5
+kubeadm reset
+kubeadm join 10.0.1.228:6443 --token 
 ```
 
 ## 8. Cluster Networking 설정
