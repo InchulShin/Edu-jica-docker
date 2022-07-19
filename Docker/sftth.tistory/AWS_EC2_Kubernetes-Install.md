@@ -80,7 +80,20 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 ## 6. kubeadm init 수행
 
+- /etc/containerd/config.toml 파일에서 
+
+disabled_plugins 항목에서 CRI 제거한 뒤
+
+```
+$ systemctl restart containerd
+```
+
 - 마스터 노드에서 root 계정으로 kubeadm init 수행 
+
+```
+$ kubeadm init
+```
+
 - 마스터 노드에서 아래 스크립트 수행 
 
 ```
