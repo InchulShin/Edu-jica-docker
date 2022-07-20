@@ -54,7 +54,6 @@ sudo containerd config default > /etc/containerd/config.toml
 sudo systemctl restart containerd
 sudo systemctl is-enabled containerd disabled 
 sudo systemctl enable containerd
-Created symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /usr/lib/systemd/system/containerd.service.
 ```
 
 ## 4. kubeadm 설치
@@ -104,6 +103,12 @@ mkdir -p $HOME/.kube
 ```
 
 ## 7. worker 노드 추가
+
+- hostname 변경
+    - 경로: /etc/hostname
+    - 기존: ip-10-0-1-228
+    - 변경: Worker1 Or 2
+    - reboot
 
 worker 노드에서 아래 스크립트 수행하여 worker 노드 추가
 
