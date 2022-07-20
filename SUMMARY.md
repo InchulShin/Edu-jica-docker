@@ -3,8 +3,8 @@
 * [전주정보문화산업진흥원](README.md)
 <!--* [Docker-Web-UI-Potainer](Docker/Portainer/Portainer-Docker-Web-UI.md)-->
 * [AWS-EC2-Kubernetes-설치](Docker/sftth.tistory/AWS_EC2_Kubernetes-Install.md)
-  * [Kubernetes-Install-Master](Docker/kubernetes-setup-master.sh)
-  * [Kubernetes-Install-Node](Docker/kubernetes-setup-node.sh)
+  * [Kubernetes-Install-Master](Docker/kubernetes-setup-master.md)
+  * [Kubernetes-Install-Node](Docker/kubernetes-setup-node.md)
 * [ECS-샘플페이지-시작하기](Docker/Intro-to-ecs/Introduction-to-Amazon-Elastic-Container-Service.md)
 * [AWS-fargatecli-cdk로 실행하기](Docker/Running-AWS-Fargatecli-cdk/Running-Containers-on-AWS-Fargatecli-cdk.md)
 * [AWS-ECS-Architecture](Docker/aws-ecs-architecture/AWS-ECS-Architecture.md)
