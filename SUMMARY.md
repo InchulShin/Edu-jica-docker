@@ -4,6 +4,7 @@
 * [Docker-Web-UI-Potainer](Docker/Portainer/Portainer-Docker-Web-UI.md)
 * [AWS-EC2-Kubernetes-설치](Docker/sftth.tistory/AWS_EC2_Kubernetes-Install.md)
 * [ECS-샘플페이지-시작하기](Docker/Intro-to-ecs/Introduction-to-Amazon-Elastic-Container-Service.md)
+* [AWS-fargatecli](Docker/fargatecli/fargatecli.md)
 <!--* [AWS-fargatecli-cdk로 실행하기](Docker/Running-AWS-Fargatecli-cdk/Running-Containers-on-AWS-Fargatecli-cdk.md)-->
 * [ECS-모놀리스-애플리케이션-마이크로서비스-분할](Docker/break-monolith-app-microservice/README.md)
   * [모듈-1-모놀리스-컨테이너화](Docker/break-monolith-app-microservice/module-one.md)
