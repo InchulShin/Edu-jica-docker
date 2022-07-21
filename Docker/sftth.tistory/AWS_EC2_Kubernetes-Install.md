@@ -167,8 +167,12 @@ calico는 kubernetes 유형별 설치 방법이 다양하게 존재함
 - calico 설치 확인 
 
 ```
-$ curl https://docs.projectcalico.org/manifests/calico.yaml -O
-$ kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+curl https://docs.projectcalico.org/manifests/calico.yaml -O
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+
+kubectl get nodes
+NAME    STATUS      ROLES           AGE     VERSION
+master  Ready       control-plane   30s     v1.24.3
 ```
 
 9. 최종 상태 확인 
