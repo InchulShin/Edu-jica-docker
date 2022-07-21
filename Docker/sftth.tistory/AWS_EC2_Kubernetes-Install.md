@@ -38,6 +38,28 @@
 - 설치 요약
 
 ```
+apt-get update
+
+apt-get -y install \
+apt-transport-https \
+ca-certificates \
+curl \
+gnupg2 \
+software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+
+add-apt-repository \
+"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \
+stable"
+
+apt-get update
+
+apt-get install -y docker-ce docker-ce-cli containerd.io
+```
+<!--
+```
 sudo apt-get remove docker docker-engine docker.io containerd runc
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
@@ -46,6 +68,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
+-->
 
 - 아래 명령어를 통해 containerd의 default values가 들어있는 파일을 생성 합니다
 
