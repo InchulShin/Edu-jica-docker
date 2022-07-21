@@ -73,16 +73,16 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 - 아래 명령어를 통해 containerd의 default values가 들어있는 파일을 생성 합니다
 
 ```
-sudo containerd config default > /etc/containerd/config.toml
-sudo systemctl restart containerd
-sudo systemctl is-enabled containerd disabled 
-sudo systemctl enable containerd
+containerd config default > /etc/containerd/config.toml
+systemctl restart containerd
+systemctl is-enabled containerd disabled 
+systemctl enable containerd
 ```
 
 ## 4. kubeadm 설치
 
 ```
-sapt-get update
+apt-get update
 
 usermod -aG docker $USER
 
@@ -118,13 +118,13 @@ swapoff -a
 disabled_plugins 항목에서 CRI 제거한 뒤
 
 ```
-$ systemctl restart containerd
+systemctl restart containerd
 ```
 
 - 마스터 노드에서 root 계정으로 kubeadm init 수행 
 
 ```
-$ kubeadm init
+kubeadm init
 ```
 
 - 마스터 노드에서 아래 스크립트 수행 
