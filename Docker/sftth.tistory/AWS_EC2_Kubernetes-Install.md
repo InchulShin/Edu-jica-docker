@@ -180,12 +180,12 @@ master  Ready       control-plane   30s     v1.24.3
 ```
 ubuntu@master:~$ kubectl get pod -n kube-system
 NAME                                       READY   STATUS              RESTARTS   AGE
-calico-kube-controllers-78d6f96c7b-7jkzf   1/1     Running             0          37s
+calico-kube-controllers-78d6f96c7b-7jkzf   1/1     Pending             0          37s
 calico-node-qmrml                          0/1     Running             0          37s
 calico-node-th24k                          0/1     Running             0          37s
 calico-node-w7hvr                          0/1     Running             0          37s
-coredns-558bd4d5db-g42l8                   0/1     ContainerCreating   0          57m
-coredns-558bd4d5db-gdmhx                   0/1     ContainerCreating   0          57m
+coredns-558bd4d5db-g42l8                   0/1     Running             0          57m
+coredns-558bd4d5db-gdmhx                   0/1     Running             0          57m
 etcd-master                                1/1     Running             0          57m
 kube-apiserver-master                      1/1     Running             0          57m
 kube-controller-manager-master             1/1     Running             0          57m
