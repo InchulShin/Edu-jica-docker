@@ -135,6 +135,12 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
+```
+kubectl get nodes
+NAME    STATUS      ROLES           AGE     VERSION
+master  NotReady    control-plane   30s     v1.24.3
+```
+
 ## 7. worker 노드 추가
 
 - hostname 변경
