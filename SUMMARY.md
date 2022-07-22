@@ -11,7 +11,7 @@
   * [모듈-4-마이크로서비스-배포](Docker/break-monolith-app-microservice/module-four.md)
   * [모듈-5-정리](Docker/break-monolith-app-microservice/module-five.md)
 * [AWS-ECS-Architecture](Docker/aws-ecs-architecture/AWS-ECS-Architecture.md)
-<!--* [Docker를 활용한 클라우드 서비스 구현 및 관리](Docker/README.md)
+* [Docker를 활용한 클라우드 서비스 구현 및 관리](Docker/README.md)
   * [ECS(ELASTIC-CONTAINER-SERVICE)-소개](Docker/ecs-lab/1.introduction.md)
   * [LAB-시작-준비하기](Docker/ecs-lab/2.start-the-workshop.md)
   * [ECS-LAB-시작하기](Docker/ecs-lab/3.microservices.md)
