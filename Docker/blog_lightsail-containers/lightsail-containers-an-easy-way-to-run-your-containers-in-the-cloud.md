@@ -1,18 +1,18 @@
 # Amazon Lightsail Container 출시 – 클라우드에서 컨테이너를 손쉽게 실행하는 방법
 
-개발자를 대상으로 AWS 클라우드를 소개할 때 저는 보통 Amazon Lightsail을 언급하고 시연하는 데 시간을 어느 정도 할애합니다. AWS에서 작업을 시작하는 방법 중 이보다 쉬운 방법은 없습니다. 몇 분 만에 자체 가상 서버에서 애플리케이션을 실행할 수 있습니다. 현재 Amazon Lightsail에 컨테이너 기반 워크로드를 배포할 수 있는 기능을 추가하고 있습니다. 이제 이 가상 서버에서 제공하는 것과 동일한 번들 요금으로 컨테이너 이미지를 클라우드에 배포할 수 있습니다.
+개발자를 대상으로 AWS 클라우드를 소개할 때 저는 보통 [Amazon Lightsail](https://aws.amazon.com/lightsail/) 을 언급하고 시연하는 데 시간을 어느 정도 할애합니다. AWS에서 작업을 시작하는 방법 중 이보다 쉬운 방법은 없습니다. 몇 분 만에 자체 가상 서버에서 애플리케이션을 실행할 수 있습니다. 현재 Amazon Lightsail에 컨테이너 기반 워크로드를 배포할 수 있는 기능을 추가하고 있습니다. 이제 이 가상 서버에서 제공하는 것과 동일한 번들 요금으로 컨테이너 이미지를 클라우드에 배포할 수 있습니다.
 
-Amazon Lightsail은 애플리케이션 또는 웹 사이트를 배포하는 데 필요한 모든 항목을 제공하는 사용하기 쉬운 클라우드 서비스로, 경제적이고 알기 쉬운 월간 플랜으로 운영됩니다. 간단한 워크로드 또는 웹 사이트를 배포하거나 AWS를 시작하는 데 적합합니다. 일반적인 Lightsail 고객은 개발자부터 클라우드와 AWS를 빠르게 시작하려는 중소기업 또는 스타트업에 이르기까지 다양합니다. 나중에 AWS 클라우드에 익숙해지면 언제든지 AWS 서비스를 폭넓게 도입할 수 있습니다.
+Amazon Lightsail은 애플리케이션 또는 웹 사이트를 배포하는 데 필요한 모든 항목을 제공하는 사용하기 쉬운 클라우드 서비스로, 경제적이고 알기 쉬운 월간 플랜으로 운영됩니다. 간단한 워크로드 또는 웹 사이트를 배포하거나 AWS를 시작하는 데 적합합니다. 일반적인 [Lightsail](https://aws.amazon.com/lightsail/) 고객은 개발자부터 클라우드와 AWS를 빠르게 시작하려는 중소기업 또는 스타트업에 이르기까지 다양합니다. 나중에 AWS 클라우드에 익숙해지면 언제든지 AWS 서비스를 폭넓게 도입할 수 있습니다.
 
-내부적으로 Lightsail은 Amazon Elastic Compute Cloud (EC2), Amazon Relational Database Service (RDS), Application Load Balancer 및 기타 AWS 서비스를 기반으로 합니다. AWS에서 기대하는 수준의 보안, 안정성 및 확장성을 제공합니다.
+내부적으로 [Lightsail](https://aws.amazon.com/lightsail/)은 Amazon Elastic Compute Cloud (EC2), Amazon Relational Database Service (RDS), Application Load Balancer 및 기타 AWS 서비스를 기반으로 합니다. AWS에서 기대하는 수준의 보안, 안정성 및 확장성을 제공합니다.
 
-Lightsail에 배포할 때는 운영 체제 6종(Linux 배포판 4가지, FreeBSD 또는 Windows), 애플리케이션 7종(WordPress, Drupal, Joomla, Plesk 등), 스택 7종(Node.js, Lamp, GitLab, Django 등) 중에서 선택할 수 있습니다. 하지만 Docker 컨테이너의 경우는 어떨까요?
+[Lightsail](https://aws.amazon.com/lightsail/) 에 배포할 때는 운영 체제 6종(Linux 배포판 4가지, FreeBSD 또는 Windows), 애플리케이션 7종(WordPress, Drupal, Joomla, Plesk 등), 스택 7종(Node.js, Lamp, GitLab, Django 등) 중에서 선택할 수 있습니다. 하지만 Docker 컨테이너의 경우는 어떨까요?
 
 오늘부터 Amazon Lightsail은 개발자가 컨테이너를 클라우드에 배포할 수 있는 간단한 방법을 제공합니다. 고객이 컨테이너의 Docker 이미지만 제공하면 자동으로 컨테이너화됩니다. Amazon Lightsail은 클라우드 컨테이너에서 실행되는 애플리케이션을 지원하는 HTTPS 엔드포인트를 제공합니다. 로드 밸런싱된 TLS 엔드포인트를 자동으로 설정하고 TLS 인증서를 처리합니다. 응답하지 않는 컨테이너를 자동으로 교체하고 엔드포인트에 DNS 이름을 할당하며 새 버전이 정상적으로 작동하는 라이브 상태가 될 때까지 이전 버전을 유지합니다.
 
-간단한 Python 웹 앱을 컨테이너로 배포하여 어떻게 작동하는지 살펴 보겠습니다. 랩톱에 AWS 명령 줄 인터페이스(CLI)와 Docker가 설치되어 있다고 가정합니다. Python은 필요하지 않습니다. 컨테이너에만 설치됩니다.
+간단한 Python 웹 앱을 컨테이너로 배포하여 어떻게 작동하는지 살펴 보겠습니다. 랩톱에 AWS 명령 줄 인터페이스(CLI)와 [Docker](https://docs.docker.com/get-docker/) 가 설치되어 있다고 가정합니다. Python은 필요하지 않습니다. 컨테이너에만 설치됩니다.
 
-먼저 Flask의 간단한 애플리케이션 프레임워크를 사용하여 Python REST API를 생성합니다. 다른 모든 프로그래밍 언어와 컨테이너 내부에서 실행할 수 있는 프레임워크도 사용 가능합니다. 저는 간단하고 원활하게 작동하는 Python과 Flask를 선택했습니다.
+먼저 [Flask의 간단한 애플리케이션 프레임워크](https://flask.palletsprojects.com/en/1.1.x/)를 사용하여 Python REST API를 생성합니다. 다른 모든 프로그래밍 언어와 컨테이너 내부에서 실행할 수 있는 프레임워크도 사용 가능합니다. 저는 간단하고 원활하게 작동하는 Python과 Flask를 선택했습니다.
 
 다음 명령을 복사해 붙여 넣어도 됩니다.
 
