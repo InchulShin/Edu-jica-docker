@@ -2,13 +2,15 @@
 
 ![docker_top_logo_1](./images/docker_top_logo_1.png)
 
-[AWS Elastic Beanstalk](https://console.aws.amazon.com/elasticbeanstalk/)를 사용하면 AWS 클라우드에서 애플리케이션을 쉽게 배포하고 관리 할 수 ​​있습니다. 애플리케이션을 업로드 한 후 Elastic Beanstalk는 용량 (Amazon EC2 인스턴스) 을 프로비저닝, 모니터링 및 확장 하는 동시에 모든 정상 인스턴스에서 수신 요청을 로드 밸런싱합니다.
+[AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)를 사용하면 AWS 클라우드에서 애플리케이션을 쉽게 배포하고 관리 할 수 ​​있습니다. 애플리케이션을 업로드 한 후 Elastic Beanstalk는 용량 ([Amazon EC2](https://aws.amazon.com/ec2/) 인스턴스) 을 프로비저닝, 모니터링 및 확장 하는 동시에 모든 정상 인스턴스에서 수신 요청을 로드 밸런싱합니다.
 
-Docker 는 다양한 환경에서 실행할 수있는 가볍고 휴대 가능하며 자 급식 컨테이너 형태로 애플리케이션 배포를 자동화합니다. 컨테이너는 사전 빌드 된 Docker 이미지 또는 Dockerfile 이라는 간단한 레시피에서 채울 수 있습니다.
+[Create A New Application](https://console.aws.amazon.com/elasticbeanstalk/home)
+
+[Docker](https://www.docker.io/) 는 다양한 환경에서 실행할 수있는 가볍고 휴대 가능하며 자 급식 컨테이너 형태로 애플리케이션 배포를 자동화합니다. 컨테이너는 사전 빌드 된 Docker 이미지 또는 Dockerfile 이라는 간단한 레시피에서 채울 수 있습니다.
 
 Docker의 컨테이너 기반 모델은 매우 유연합니다. 예를 들어 컨테이너를 로컬에서 빌드 및 테스트한 다음 배포 및 확장 성을 위해 AWS 클라우드 에 업로드 할 수 있습니다. Docker의 자동화 된 배포 모델은 애플리케이션을 호스팅하기로 결정한 위치에 관계없이 애플리케이션의 런타임 환경이 항상 올바르게 설치되고 구성되도록합니다.
 
-오늘 우리는 Docker 이미지에 포함되거나 Dockerfiles에 설명 된 애플리케이션을 시작하는 기능을 통해 Elastic Beanstalk를 개선하고 있습니다. Docker는 기존 Node.JS, PHP, Python, .NET, Java 및 Ruby 환경에 합류하는 Elastic Beanstalk를위한 흥미롭고 강력한 새로운 런타임 환경으로 생각할 수 있습니다 .
+오늘 우리는 Docker 이미지에 포함되거나 Dockerfiles에 설명 된 애플리케이션을 시작하는 기능을 통해 Elastic Beanstalk를 개선하고 있습니다. Docker는 [기존](https://aws.amazon.com/elasticbeanstalk/details/) Node.JS, PHP, Python, .NET, Java 및 Ruby 환경에 합류하는 Elastic Beanstalk를위한 흥미롭고 강력한 새로운 런타임 환경으로 생각할 수 있습니다 .
 
 ## Beanstalk, Docker 만나기
 오늘 출시와 함께 이제 로컬 데스크톱에서 애플리케이션을 빌드하고 테스트 한 다음 Elastic Beanstalk를 통해 AWS 클라우드에 배포 할 수 있습니다.
