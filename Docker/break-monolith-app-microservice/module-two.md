@@ -62,12 +62,20 @@ Application Load Balancer의 배후에 배포된 Amazon ECS 클러스터를 생�
 
 ⚐ 참고: 원하는 경우 AWS Command Line Interface(AWS CLI)를 사용하여 AWS CloudFormation 스택을 배포할 수 있습니다. amazon-ecs-nodejs-microservices/3-microservices 폴더에서 터미널을 통해 다음 코드를 실행합니다. 이때 [region]을 사용자의 AWS 리전으로 바꿉니다.
 
+1. Cloudformation 템플릿을 사용하여 ECS 클러스터를 시작합니다.
+
 ```
 $ aws cloudformation deploy \
    --template-file infrastructure/ecs.yml \
    --region [region] \
    --stack-name BreakTheMonolith-Demo \
    --capabilities CAPABILITY_NAMED_IAM
+```
+
+2. 클러스터에 서비스를 배포합니다.
+
+```
+$ ./deploy.sh <region> <stack name>
 ```
 
 ## 2단계 클러스터가 실행중인지 확인
