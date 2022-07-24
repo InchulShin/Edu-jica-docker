@@ -2,11 +2,11 @@
 
 ![docker_top_logo_1](./images/docker_top_logo_1.png)
 
-AWS Elastic Beanstalk를 사용하면 AWS 클라우드에서 애플리케이션을 쉽게 배포하고 관리 할 수 ​​있습니다. 애플리케이션을 업로드 한 후 Elastic Beanstalk는 용량 ( Amazon EC2 인스턴스) 을 프로비저닝, 모니터링 및 확장 하는 동시에 모든 정상 인스턴스에서 수신 요청을로드 밸런싱합니다.
+[AWS Elastic Beanstalk](https://console.aws.amazon.com/elasticbeanstalk/)를 사용하면 AWS 클라우드에서 애플리케이션을 쉽게 배포하고 관리 할 수 ​​있습니다. 애플리케이션을 업로드 한 후 Elastic Beanstalk는 용량 (Amazon EC2 인스턴스) 을 프로비저닝, 모니터링 및 확장 하는 동시에 모든 정상 인스턴스에서 수신 요청을 로드 밸런싱합니다.
 
-Docker 는 다양한 환경에서 실행할 수있는 가볍고 휴대 가능하며 자 급식 컨테이너 형태로 애플리케이션 배포를 자동화합니다. 컨테이너는 사전 빌드 된 Docker 이미지 또는 Dockerfile 이라는 간단한 레시피에서 채울 수 있습니다 .
+Docker 는 다양한 환경에서 실행할 수있는 가볍고 휴대 가능하며 자 급식 컨테이너 형태로 애플리케이션 배포를 자동화합니다. 컨테이너는 사전 빌드 된 Docker 이미지 또는 Dockerfile 이라는 간단한 레시피에서 채울 수 있습니다.
 
-Docker의 컨테이너 기반 모델은 매우 유연합니다. 예를 들어 컨테이너를 로컬에서 빌드 및 테스트 한 다음 배포 및 확장 성을 위해 AWS 클라우드 에 업로드 할 수 있습니다. Docker의 자동화 된 배포 모델은 애플리케이션을 호스팅하기로 결정한 위치에 관계없이 애플리케이션의 런타임 환경이 항상 올바르게 설치되고 구성되도록합니다.
+Docker의 컨테이너 기반 모델은 매우 유연합니다. 예를 들어 컨테이너를 로컬에서 빌드 및 테스트한 다음 배포 및 확장 성을 위해 AWS 클라우드 에 업로드 할 수 있습니다. Docker의 자동화 된 배포 모델은 애플리케이션을 호스팅하기로 결정한 위치에 관계없이 애플리케이션의 런타임 환경이 항상 올바르게 설치되고 구성되도록합니다.
 
 오늘 우리는 Docker 이미지에 포함되거나 Dockerfiles에 설명 된 애플리케이션을 시작하는 기능을 통해 Elastic Beanstalk를 개선하고 있습니다. Docker는 기존 Node.JS, PHP, Python, .NET, Java 및 Ruby 환경에 합류하는 Elastic Beanstalk를위한 흥미롭고 강력한 새로운 런타임 환경으로 생각할 수 있습니다 .
 
@@ -15,20 +15,20 @@ Docker의 컨테이너 기반 모델은 매우 유연합니다. 예를 들어 �
 
 원하는 버전의 프로그래밍 언어, 웹 서버 및 응용 프로그램 서버를 사용할 수 있습니다. 원하는대로 구성 할 수 있으며 필요에 따라 추가 패키지와 라이브러리를 설치할 수 있습니다.
 
-기존 공개 및 비공개 Docker 이미지를 시작할 수 있습니다 . 각 이미지에는 애플리케이션 및 해당 종속성의 스냅 샷이 포함되며 몇 가지 간단한 Docker 명령을 사용하여 로컬에서 생성 할 수 있습니다. Elastic Beanstalk에서 이미지를 사용하려면 Dockerrun.aws.json 이라는 파일을 생성합니다 . 이 파일은 사용할 이미지를 지정하고 호스트 환경에서 컨테이너로 매핑 할 볼륨과 노출 할 포트를 설정할 수도 있습니다. 당신이 개인 도커 이미지를 사용하는 경우, 당신은 또한 작성해야합니다 .dockercfg의 파일을 아마존 S3에 저장, 그리고 인증 섹션에서 참조 Dockerrun.aws.json .
+기존 공개 및 비공개 Docker 이미지를 시작할 수 있습니다. 각 이미지에는 애플리케이션 및 해당 종속성의 스냅샷이 포함되며 몇 가지 간단한 Docker 명령을 사용하여 로컬에서 생성 할 수 있습니다. Elastic Beanstalk에서 이미지를 사용하려면 **Dockerrun.aws.json** 이라는 파일을 생성합니다. 이 파일은 사용할 이미지를 지정하고 호스트 환경에서 컨테이너로 매핑 할 볼륨과 노출 할 포트를 설정할 수도 있습니다. 당신이 개인 도커 이미지를 사용하는 경우, 당신은 또한 작성해야합니다. **dockercfg** 의 파일을 Amazon S3에 저장, 그리고 인증 섹션에서 참조 **Dockerrun.aws.json**.
 
-Dockerfile을 사용할 수도 있습니다 . 이러한 파일에 포함 된 Docker 명령은 Elastic Beanstalk에서 설정 한 Auto Scaling 구성의 일부로 처리 및 실행됩니다. 즉, Elastic Beanstalk 애플리케이션을 호스팅하는 데 사용되는 새로 생성 된 각 EC2 인스턴스는 Dockerfile의 지시에 따라 구성됩니다.
+**Dockerfile** 을 사용할 수도 있습니다. 이러한 파일에 포함 된 Docker 명령은 Elastic Beanstalk에서 설정 한 Auto Scaling 구성의 일부로 처리 및 실행됩니다. 즉, Elastic Beanstalk 애플리케이션을 호스팅하는 데 사용되는 새로 생성된 각 EC2 인스턴스는 Dockerfile의 지시에 따라 구성됩니다.
 
 어떤 옵션을 선택하든 항상 Elastic Beanstalk에 단일 파일을 업로드합니다. 이 업로드는 다음과 같습니다.
 
 1. 일반 Dockerfile.  
 2. 일반 Docker.aws.json 파일.  
-3. 다른 애플리케이션 자산과 함께 Dockerfile 또는 Docker.aws.json이 포함 된 Zip 파일입니다.  
+3. 다른 애플리케이션 자산과 함께 **Dockerfile** 또는 **Docker.aws.json** 이 포함된 Zip 파일입니다.  
 
-세 번째 옵션은 인스턴스에 많은 "움직이는 부품"이 있어야하는 응용 프로그램에 유용 할 수 있습니다. Dockerfile을 사용하는 경우 파일에 포함 된 셸 명령을 사용하여 이러한 부분을 가져 오도록 선택할 수도 있습니다.
+세 번째 옵션은 인스턴스에 많은 "움직이는 부품" 이 있어야 하는 응용 프로그램에 유용 할 수 있습니다. **Dockerfile** 을 사용하는 경우 파일에 포함된 셸 명령을 사용하여 이러한 부분을 가져 오도록 선택할 수도 있습니다.
 
 ## Docker 실행 Docker
-Elastic Beanstalk를 사용하여 간단한 PHP 애플리케이션을 만들어 보겠습니다! 첫 번째 단계는 모든 Elastic Beanstalk 애플리케이션에서 동일합니다. 이름과 설명 만 입력하면 됩니다.
+Elastic Beanstalk를 사용하여 간단한 PHP 애플리케이션을 만들어 보겠습니다! 첫 번째 단계는 모든 Elastic Beanstalk 애플리케이션에서 동일합니다. 이름과 설명만 입력하면 됩니다.
 
 ![docker_create_app_page_1_1](./images/docker_create_app_page_1_1.png)
 
@@ -38,9 +38,7 @@ Elastic Beanstalk를 사용하여 간단한 PHP 애플리케이션을 만들어 
 
 움직이는 부분은 단일 디렉토리에 있으며 src 및 웹 하위 디렉토리와 루트에 Dockerfile 이 있습니다.
 
-<!-->
 ![docker_dockerfile_1](./images/docker_dockerfile_1.png)
--->
 
 ```
 FROM ubuntu:12.04
