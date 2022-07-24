@@ -42,7 +42,7 @@ Docker 컨테이너의 유연성은 이동성, 배포 편이성 및 작은 용�
 
 1. AWS 계정 준비: 아직 AWS에 계정이 없다면 [여기에서 등록](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html)할 수 있습니다. 이 자습서에 있는 모든 실습은 [AWS 프리 티어](https://aws.amazon.com/free/)에서 실행할 수 있도록 설계되었습니다.
 
-⚐ 참고: 앞으로 사용하게 될 일부 서비스에서는 계정을 12시간 이상 활성화해야 할 수도 있습니다. 서비스 사용에 어려움이 있고 새로 생성된 계정이 있다면 몇 시간 기다렸다가 다시 시도하십시오.
+- ⚐ 참고: 앞으로 사용하게 될 일부 서비스에서는 계정을 12시간 이상 활성화해야 할 수도 있습니다. 서비스 사용에 어려움이 있고 새로 생성된 계정이 있다면 몇 시간 기다렸다가 다시 시도하십시오.
 
 2. Docker 설치: Docker를 사용하여 컨테이너에서 실행될 이미지 파일을 구축합니다. Docker는 오픈 소스 프로젝트입니다. [Mac](https://docs.docker.com/docker-for-mac/install/) 또는 [Windows](https://docs.docker.com/docker-for-windows/install/)용으로 다운로드할 수 있습니다.
 Docker가 설치된 이후에는 터미널에 Docker --version을 입력하여 실행 중인지 확인할 수 있습니다. 버전 번호가 표시됩니다(예: Docker version 19.03.5, build 633a0ea).
@@ -61,8 +61,9 @@ Docker가 설치된 이후에는 터미널에 Docker --version을 입력하여 �
 
 ## 2단계. 프로젝트 다운로드 및 열기
 
-GitHub에서 코드 다운로드: https://github.com/awslabs/amazon-ecs-nodejs-microservices로 이동하고 [복제 또는 다운로드]를 선택하여 GitHub 리포지토리를 로컬 환경에 다운로드합니다. [GitHub Desktop](https://desktop.github.com/) 또는 [Git](https://git-scm.com/)를 사용하여 리포지토리를 복제할 수도 있습니다.
-프로젝트 파일 열기: Atom을 시작하고 [프로젝트 폴더 추가]를 선택한 다음, 리포지토리 amazon-ecs-nodejs-microservices를 저장한 폴더를 선택합니다. Atom에 프로젝트 전체가 추가되어 손쉽게 작업할 수 있습니다.
+GitHub에서 [코드 다운로드](https://github.com/awslabs/amazon-ecs-nodejs-microservices/) 로 이동하고 [복제 또는 다운로드]를 선택하여 GitHub 리포지토리를 로컬 환경에 다운로드합니다. [GitHub Desktop](https://desktop.github.com/) 또는 [Git](https://git-scm.com/)를 사용하여 리포지토리를 복제할 수도 있습니다.
+
+프로젝트 파일 열기: [Atom](https://atom.io)을 시작하고 [프로젝트 폴더 추가]를 선택한 다음, 리포지토리 amazon-ecs-nodejs-microservices를 저장한 폴더를 선택합니다. Atom에 프로젝트 전체가 추가되어 손쉽게 작업할 수 있습니다.
 
 프로젝트 폴더에서 인프라와 서비스에 대한 폴더가 보일 것입니다. 인프라 폴더에는 다음 단계에서 사용할 AWS CloudFormation 인프라 구성 코드가 있습니다. 서비스 폴더에는 node.js 애플리케이션을 구성하는 코드가 포함되어 있습니다.
 
