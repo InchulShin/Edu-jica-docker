@@ -35,31 +35,49 @@ Amazon Linux 2 AMI 인스턴스를 시작합니다. 자세한 내용은 Linux �
 
 인스턴스에 설치한 패키지 및 패키지 캐시를 업데이트합니다.
 
+```
 sudo yum update -y
+```
+
 최신 Docker Engine 패키지를 설치합니다.
 
+```
 sudo amazon-linux-extras install docker
-중요
-이 단계에서는 인스턴스에 Amazon Linux 2 AMI를 사용하고 있다고 가정합니다. 다른 모든 운영 체제의 경우 Docker Desktop 개요를 참조하세요.
+```
+
+    중요
+    이 단계에서는 인스턴스에 Amazon Linux 2 AMI를 사용하고 있다고 가정합니다. 다른 모든 운영 체제의 경우 Docker Desktop 개요를 참조하세요.
 
 Docker 서비스를 시작합니다.
 
+```
 sudo service docker start
+```
+
 (선택 사항) 시스템이 재부팅될 때마다 Docker 데몬이 시작되도록 하려면 다음 명령을 실행합니다.
 
+```
 sudo systemctl enable docker
+```
+
 sudo를 사용하지 않고도 Docker 명령을 실행할 수 있도록 docker 그룹에 ec2-user를 추가합니다.
 
+```
 sudo usermod -a -G docker ec2-user
+```
+
 로그아웃하고 다시 로그인해서 새 docker 그룹 권한을 선택합니다. 이를 위해 현재 SSH 터미널 창을 닫고 새 창에서 인스턴스를 다시 연결할 수 있습니다. 새 SSH 세션은 해당되는 docker 그룹 권한을 갖게 됩니다.
 
 sudo 없이도 Docker 명령을 실행할 수 있는지 확인합니다.
 
+```
 docker info
-참고
-경우에 따라서는 ec2-user가 Docker 데몬에 액세스할 수 있는 권한을 제공하기 위해 인스턴스를 재부팅해야 할 수도 있습니다. 다음 오류가 표시될 경우 인스턴스를 재부팅합니다.
+```
 
-Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+    참고
+    경우에 따라서는 ec2-user가 Docker 데몬에 액세스할 수 있는 권한을 제공하기 위해 인스턴스를 재부팅해야 할 수도 있습니다. 다음 오류가 표시될 경우 인스턴스를 재부팅합니다.
+
+    Cannot connect to the Docker daemon. Is the docker daemon running on this host?
 
 </div>
 </details>
