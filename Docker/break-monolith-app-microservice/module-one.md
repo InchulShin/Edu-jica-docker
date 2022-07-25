@@ -47,13 +47,13 @@ Docker 컨테이너의 유연성은 이동성, 배포 편이성 및 작은 용�
 2. Docker 설치: Docker를 사용하여 컨테이너에서 실행될 이미지 파일을 구축합니다. Docker는 오픈 소스 프로젝트입니다. [Mac](https://docs.docker.com/docker-for-mac/install/) 또는 [Windows](https://docs.docker.com/docker-for-windows/install/)용으로 다운로드할 수 있습니다.
 Docker가 설치된 이후에는 터미널에 Docker --version을 입력하여 실행 중인지 확인할 수 있습니다. 버전 번호가 표시됩니다(예: Docker version 19.03.5, build 633a0ea).
 
-3. AWS CLI 설치:
+3. AWS CLI 설치:Cloud9, Amazon Linux2 는 이미 설치되어 있습니다.
 
 - AWS Command Line Interface(AWS CLI)를 사용하여 이미지를 Amazon ECR로 푸시합니다. AWS CLI에 대한 자세한 정보 및 다운로드는 [여기](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)에서 확인할 수 있습니다.
 
-- AWS CLI가 설치된 후에는 터미널에 aws --version을 입력하여 실행 중인지 확인합니다. 버전 번호가 표시됩니다(예: aws-cli/1.16.217 Python/2.7.16 Darwin/18.7.0 botocore/1.12.207).
+- AWS CLI가 설치된 후에는 터미널에 **aws --version**을 입력하여 실행 중인지 확인합니다. 버전 번호가 표시됩니다(예: aws-cli/1.16.217 Python/2.7.16 Darwin/18.7.0 botocore/1.12.207).
 
-- 이미 AWS CLI를 설치했다면 터미널에 pip install awscli --upgrade --user 명령을 실행하여 최신 버전으로 업데이트합니다.
+- 이미 AWS CLI를 설치했다면 터미널에 **pip install awscli --upgrade --user** 명령을 실행하여 최신 버전으로 업데이트합니다.
 
 - AWS CLI를 처음 사용하는 경우 [자격 증명](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)을 구성해야 할 수도 있습니다.
 
