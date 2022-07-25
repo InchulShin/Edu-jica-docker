@@ -77,9 +77,9 @@ GitHub에서 [코드 다운로드](https://github.com/awslabs/amazon-ecs-nodejs-
 
 - [리포지토리] 페이지에서 [리포지토리 생성]을 선택합니다.
 
-- [리포지토리 생성] 페이지에서 리포지토리 이름을 api로 입력합니다.
+- [리포지토리 생성] 페이지에서 리포지토리 이름을 **api**로 입력합니다.
 
-⚐ 참고: [태그 불변성]은 기본 설정으로 둡니다.
+    ⚐ 참고: [태그 불변성]은 기본 설정으로 둡니다.
 
 - 리포지토리 생성을 선택합니다.
 
@@ -91,15 +91,17 @@ GitHub에서 [코드 다운로드](https://github.com/awslabs/amazon-ecs-nodejs-
 
 ## 4단계. Docker 이미지 구축 및 푸시
 
-터미널에 액세스하고 ~/amazon-ecs-nodejs-microservices/2-containerized/services/api 디렉터리로 이동합니다.
+터미널에 액세스하고 **~/amazon-ecs-nodejs-microservices/2-containerized/services/api** 디렉터리로 이동합니다.
 
 터미널을 사용하여 Docker 로그인 인증:
 
-1. $(aws ecr get-login --no-include-email --region [your-region])을 실행합니다. [your-region]은 해당 리전으로 바꿉니다(예: $(aws ecr get-login --no-include-email --region us-west-2)). 필요한 경우 [자격 증명](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)을 구성합니다.
+1. **$(aws ecr get-login --no-include-email --region [your-region])**을 실행합니다. [your-region]은 해당 리전으로 바꿉니다
+(예: $(aws ecr get-login --no-include-email --region us-west-2)). 
+필요한 경우 [자격 증명](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)을 구성합니다.
 
 인증에 성공하면 로그인 성공이라는 확인 메시지를 받게 됩니다.
 
-2. 이미지를 구축하려면 터미널에서 docker build -t api 명령을 실행합니다.
+2. 이미지를 구축하려면 터미널에서 **docker build -t api .** 명령을 실행합니다.
 
 ⚐ 참고: api 뒤에 마침표(.)를 입력해야 합니다.
 
