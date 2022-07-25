@@ -11,7 +11,10 @@
   * [모듈-3-모놀리스-나누기](Docker/break-monolith-app-microservice/module-three.md)
   * [모듈-4-마이크로서비스-배포](Docker/break-monolith-app-microservice/module-four.md)
   * [모듈-5-정리](Docker/break-monolith-app-microservice/module-five.md)
-* [Amazon Lightsail Container 출시](Docker/blog_lightsail-containers/lightsail-containers-an-easy-way-to-run-your-containers-in-the-cloud.md)
+* [Amazon Lightsail Container](Docker/blog_lightsail-containers/lightsail-containers-an-easy-way-to-run-your-containers-in-the-cloud.md)
+
+---
+
 * [ECS 시작하기-Copilot-cdk](Docker/getting-started/README.md)
   * [사전설정](Docker/getting-started/get-set-up-for-amazon-ecs.md)
   * [Amazon ECS에서 사용할 컨테이너 이미지 생성](Docker/getting-started/create-container-image.md)
