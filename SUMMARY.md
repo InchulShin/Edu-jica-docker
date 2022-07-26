@@ -22,7 +22,7 @@
     * [Amazon ECS에서 사용할 컨테이너 이미지 생성](Project/getting-started/create-container-image.md)
     * [AWS Copilot을 사용하여 Amazon ECS 시작하기](Project/getting-started/getting-started-aws-copilot-cli.md)
     * [AWS CDK을 사용하여 Amazon ECS 시작하기](Project/getting-started/tutorial-ecs-web-server-cdk.md)
-  * [Docker를 활용한 클라우드 서비스 구현 및 관리](Project/README.md)
+  * [Docker를 활용한 클라우드 서비스 구현 및 관리](Project/ecs-lab/README.md)
     * [ECS(ELASTIC-CONTAINER-SERVICE)-소개](Project/ecs-lab/1.introduction.md)
     * [LAB-시작-준비하기](Project/ecs-lab/2.start-the-workshop.md)
     * [ECS-LAB-시작하기](Project/ecs-lab/3.microservices.md)
