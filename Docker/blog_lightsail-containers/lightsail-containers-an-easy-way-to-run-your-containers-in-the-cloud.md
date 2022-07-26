@@ -44,7 +44,7 @@ if __name__ == '__main__':
 ```Bash
 # Dockerfile 생성
 echo '
-FROM python:3
+FROM python:3.7.10
 ADD helloworld.py /
 RUN pip install flask
 RUN pip install flask_restful
