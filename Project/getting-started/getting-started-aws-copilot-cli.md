@@ -15,6 +15,16 @@ Amazon ECS 애플리케이션을 배포하여 AWS Copilot으로 Amazon ECS를 �
 
 - Docker를 설치 및 실행합니다. 자세한 내용은 Docker 시작하기를 참조하세요.
 
+## AWS Copilot CLI 수동 설치
+Homebrew 대신 macOS나 Linux 시스템에 AWS Copilot CLI를 수동으로 설치할 수 있습니다. 운영 체제에 다음의 명령을 사용하여 바이너리를 다운로드하고, 실행 권한을 바이너리에 적용한 다음, 도움말 메뉴에 등록하여 작동하는지 확인합니다.
+
+### Linux x86
+```
+sudo curl -Lo /usr/local/bin/copilot https://github.com/aws/copilot-cli/releases/latest/download/copilot-linux \
+   && sudo chmod +x /usr/local/bin/copilot \
+   && copilot --help
+```
+
 ## 하나의 명령을 사용하여 애플리케이션 배포
 AWS 명령줄 도구를 설치하고 시작하기 전에 이미 `aws configure`를 실행하였는지 확인합니다.
 
