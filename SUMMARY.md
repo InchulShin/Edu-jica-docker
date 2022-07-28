@@ -26,6 +26,6 @@
     * [ECS(ELASTIC-CONTAINER-SERVICE)-소개](Project/ecs-lab/1.introduction.md)
     * [LAB-시작-준비하기](Project/ecs-lab/2.start-the-workshop.md)
     * [ECS-LAB-시작하기](Project/ecs-lab/3.microservices.md)
-  <!--  * [ECS 클러스터 및 컨테이너 모니터링하기](Project/ecs-lab/4.monitoring.md)
+    * [ECS 클러스터 및 컨테이너 모니터링하기](Project/ecs-lab/4.monitoring.md)
     * [AMAZON ECS 클러스터 용량 공급자](Project/ecs-lab/6.capacity-providers.md)
     * [ECS FARGATE의 블루/그린 배포](Project/ecs-lab/8.blue-green-deployments.md)
