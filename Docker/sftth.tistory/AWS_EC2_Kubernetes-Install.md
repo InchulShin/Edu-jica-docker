@@ -22,7 +22,7 @@
 
 - hostname 변경
     - 경로: /etc/hostname
-    - 기존: ip-10-0-1-228
+    - 기존: ip-000-0000-000-000
     - 변경: Master
     - reboot
 
@@ -70,7 +70,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 -->
 
-- 아래 명령어를 통해 containerd의 default values가 들어있는 파일을 생성 합니다
+- 아래 명령어를 통해 containerd의 default values가 들어있는 파일을 생성합니다
 
 ```
 containerd config default > /etc/containerd/config.toml
@@ -80,6 +80,8 @@ systemctl enable containerd
 ```
 
 ## 4. kubeadm 설치
+
+- 가장 최신 버전인 1.24.3 버전으로 설치합니다.
 
 ```
 apt-get update
